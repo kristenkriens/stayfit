@@ -1,0 +1,29 @@
+$black: #2d2d2d;
+$dark-gray: #555;
+$gray: #676c77;
+$med-gray: #bbb;
+$light-gray: #e0e0e0;
+$white: #fff;
+$dark-blue: #0d1f35;
+$med-blue: #19253b;
+$bright-blue: #11bcf4;
+$bright-purple: #eb6ef8;
+$bright-orange: #fd682e;
+$bright-green: #65be3e;
+
+$font-headers: 'Montserrat', sans-serif;
+$font-body: 'Open Sans', sans-serif;
+
+$header-height: 70px;
+$hero-height: calc(100vh - 70px);
+
+$xs-width: 320px;
+$xs-width-plus: $xs-width + 1px;
+$sm-width: 480px;
+$sm-width-plus: $sm-width + 1px;
+$md-width: 768px;
+$md-width-plus: $md-width + 1px;
+$lg-width: 940px;
+$lg-width-plus: $lg-width + 1px;
+$xl-width: 1200px;
+$xl-width-plus: $xl-width + 1px;

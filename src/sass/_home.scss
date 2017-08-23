@@ -1,0 +1,565 @@
+.hero {
+  height: $hero-height;
+  min-height: 400px;
+  background-image: url(../images/home/hero.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  .wrapper {
+    margin: 0 auto;
+  }
+}
+
+.hero__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  color: $white;
+  max-width: 950px;
+  width: 100%;
+  padding: 0 50px;
+
+  @media (min-width: $sm-width-plus) and (max-width: $md-width) {
+    top: calc(50% + 25px);
+  }
+
+  &-inner {
+    transform: skewX(-22.5deg);
+    padding: 15px 30px;
+    margin: 5px 0;
+    display: inline-block;
+    position: relative;
+
+    &--small {
+      background-color: $bright-blue;
+    }
+
+    &--large {
+      background-color: $dark-blue;
+    }
+  }
+
+  h3, h4 {
+    transform: skewX(22.5deg);
+  }
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%) skewX(22.5deg);
+
+    + h4 {
+      margin-left: 40px;
+    }
+  }
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+
+  @media (max-width: $sm-width) {
+    flex-wrap: wrap;
+  }
+
+  &__left {
+    padding: 0 30px 0 0;
+    width: auto;
+    flex-grow: 0;
+    flex-shrink: 0;
+    position: relative;
+    border-right: 3px solid $bright-blue;
+
+    @media (max-width: $md-width) {
+      width: 35%;
+    }
+
+    @media (max-width: $sm-width) {
+      width: 100%;
+      padding: 0 0 10px 0;
+      border-right: none;
+      border-bottom: 3px solid $bright-blue;
+    }
+  }
+
+  &__right {
+    padding: 0 0 0 30px;
+
+    @media (max-width: $sm-width) {
+      width: 100%;
+      padding: 15px 0 0 0;
+    }
+  }
+
+  &__top {
+    color: $bright-blue;
+    font-size: 16px;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+  }
+
+  &--wrapped {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  &--narrow {
+    max-width: 400px;
+  }
+}
+
+.reasons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+
+  &__item {
+    margin: 0 20px;
+
+    h5 {
+      text-align: center;
+    }
+
+    &-inner {
+      border: 2px solid transparent;
+      border-radius: 50%;
+      position: relative;
+      margin: 15px 15px 50px 30px;
+      padding: 3px;
+      width: 160px;
+      transition: 200ms border-color ease;
+
+      &:hover, &:active, &:focus {
+        border: 2px solid $bright-green;
+
+        .reasons__title {
+          background-color: $bright-green;
+          color: $white;
+        }
+      }
+    }
+  }
+
+  &__title, &__price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 50%;
+  }
+
+  &__title {
+    letter-spacing: 2px;
+    width: 150px;
+    height: 150px;
+    padding: 20px;
+    background-color: $light-gray;
+    transition: 200ms background-color ease;
+  }
+
+  &__price {
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+    position: absolute;
+    bottom: -30px;
+    left: -30px;
+    font-size: 22px;
+    color: $white;
+
+    &-cents {
+      position: relative;
+      top: -3px;
+      font-size: 13px;
+    }
+
+    &--blue {
+      background-color: $bright-blue;
+    }
+
+    &--purple {
+      background-color: $bright-purple;
+    }
+
+    &--orange {
+      background-color: $bright-orange;
+    }
+  }
+
+  &__image {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: -15px;
+    right: -15px;
+  }
+}
+
+.testimonial {
+  display: flex;
+  justify-content: space-between;
+
+  &__text {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: $white;
+    width: 30%;
+    padding: 75px 30px 65px 30px;
+    position: relative;
+
+    @media (max-width: $lg-width) {
+      background-color: $bright-blue;
+      width: 100%;
+      padding: 50px 20px 40px 20px;
+    }
+
+    &:after {
+      background-color: $bright-blue;
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -50px;
+      width: 200%;
+      height: 100%;
+      transform: skewX(-22.5deg);
+
+      @media (max-width: $lg-width) {
+        opacity: 0.6;
+        right: 0;
+        width: 100%;
+        transform: none;
+      }
+    }
+
+    img {
+      z-index: 1;
+    }
+
+    &-quote {
+      text-align: center;
+      line-height: 2.5;
+      margin: 50px 0 40px 0;
+      z-index: 1;
+
+      @media (max-width: $lg-width) {
+        margin: 35px 0 25px 0;
+      }
+    }
+
+    &-name {
+      text-align: center;
+      opacity: 0.5;
+      font-weight: 300;
+      z-index: 1;
+    }
+  }
+
+  &__image {
+    width: 70%;
+    background-image: url(../images/home/sweaty-dude.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media (max-width: $lg-width) {
+      display: none;
+    }
+  }
+}
+
+.courses-training {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .wrapper {
+    margin-bottom: 0;
+  }
+
+  &__item {
+    border-bottom: 1px solid $med-gray;
+    width: calc(50% - 20px);
+    margin-bottom: 25px;
+    padding-bottom: 30px;
+    position: relative;
+
+    @media (max-width: $sm-width) {
+      width: 100%;
+    }
+
+    &:nth-of-type(even) {
+      margin-right: 20px;
+    }
+
+    &:nth-of-type(odd) {
+      margin-left: 20px;
+    }
+
+    &:last-of-type, &:nth-last-of-type(2) {
+      border-bottom: 0;
+      margin-bottom: 0;
+    }
+
+    @media (max-width: $sm-width) {
+      &:nth-of-type(even), &:nth-of-type(odd) {
+        margin: 0 0 25px 0;
+      }
+
+      &:nth-last-of-type(2) {
+        border-bottom: 1px solid $med-gray;
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  p {
+    margin-bottom: 50px;
+  }
+
+  &__button {
+    text-transform: uppercase;
+    padding: 5px 15px;
+    border: 1px solid $med-gray;
+    background-color: transparent;
+    float: right;
+    transition: 200ms background-color ease, 200ms color ease;
+    position: absolute;
+    bottom: 30px;
+    right: 0;
+
+    &:hover, &:active, &:focus {
+      background-color: $bright-blue;
+      border-color: transparent;
+      color: $white;
+    }
+  }
+}
+
+.success-story {
+  position: relative;
+
+  h2:not(.heading__top) {
+    text-transform: none;
+  }
+
+  &__left {
+    width: 50%;
+    position: relative;
+
+    @media (max-width: $xl-width) {
+      width: 40%;
+    }
+
+    @media (max-width: $md-width) {
+      width: 100%;
+      margin-bottom: 35px;
+
+      &:after {
+        display: none;
+      }
+    }
+
+    p {
+      position: relative;
+
+      @media (min-width: $md-width-plus) and (max-width: $lg-width) {
+        padding-right: 20px;
+      }
+    }
+
+    &:after {
+      background-color: $white;
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -50px;
+      width: 200%;
+      height: 100%;
+      transform: skewX(-22.5deg);
+    }
+  }
+
+  &__right {
+    width: 50%;
+    min-height: 350px;
+
+    @media (max-width: $xl-width) {
+      width: 60%;
+    }
+
+    @media (max-width: $lg-width) {
+      min-height: 400px;
+    }
+
+    @media (max-width: $md-width) {
+      width: 100%;
+      min-height: auto;
+    }
+  }
+
+  &__image {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: url(../images/home/jenna-smith.png);
+    background-size: cover;
+    background-position: top right;
+    background-repeat: no-repeat;
+    z-index: -1;
+
+    @media (max-width: $xl-width) {
+      width: 60%;
+    }
+
+    @media (max-width: $md-width) {
+      width: 100%;
+      background: none;
+      position: static;
+    }
+
+    &-text {
+      background-color: $bright-blue;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 55px;
+      width: 100%;
+      padding: 10px;
+
+      @media (max-width: $md-width) {
+        height: auto;
+        position: static;
+        width: calc(100% + 40px);
+        margin-left: -20px;
+        margin-right: -20px;
+        flex-wrap: wrap;
+      }
+
+      p {
+        display: inline-block;
+        color: $white;
+        text-align: center;
+        padding: 5px 10px;
+      }
+    }
+
+    &-band {
+      background-color: $bright-blue;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      height: 55px;
+      width: 100%;
+      z-index: -2;
+
+      @media (max-width: $md-width) {
+        display: none;
+      }
+    }
+  }
+}
+
+.gym-studio {
+  position: relative;
+
+  .wrapper {
+    margin-bottom: 0;
+    height: 70px;
+
+    @media (max-width: $sm-width) {
+      height: auto;
+    }
+  }
+
+  &__heading {
+    background-color: $bright-blue;
+    color: $white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: auto;
+    flex-grow: 0;
+    flex-shrink: 0;
+    padding: 15px 10px 15px 20px;
+
+    @media (max-width: $sm-width) {
+      position: relative;
+      left: -20px;
+    }
+
+    h3 {
+      font-weight: 400;
+
+      &:nth-of-type(2) {
+        font-size: 14px;
+        margin-top: -10px;
+      }
+    }
+
+    &:after {
+      background-color: $bright-blue;
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -25px;
+      width: 200%;
+      height: 100%;
+      transform: skewX(22.5deg);
+    }
+  }
+
+  &__logos {
+    width: calc(100% - 250px);
+    margin-left: 250px;
+
+    @media (max-width: $sm-width) {
+      margin-left: 0;
+      width: 100%;
+    }
+
+    .slick-list {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .slick-track {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    img {
+      padding: 20px;
+      max-width: 150px;
+
+      @media (max-width: $sm-width) {
+        padding: 20px 10px;
+      }
+    }
+  }
+}
