@@ -17,8 +17,8 @@ header {
 		}
 	}
 
-	@media (max-width: $md-width) {
-		height: auto;
+	@media (min-width: $sm-width-plus) and (max-width: $md-width) {
+		height: 115px;
 	}
 }
 
