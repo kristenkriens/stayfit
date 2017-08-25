@@ -1,5 +1,6 @@
 .footer {
   background-color: $dark-blue;
+  font-size: 13px;
 
   p, a {
     font-weight: 400;
@@ -119,7 +120,6 @@
         width: calc(calc(100% / 3) - calc(20px / 3));
         color: $white;
         padding: 8px 3px;
-        font-size: 13px;
         background-color: $med-blue;
         margin: 10px 0 0 0;
         text-align: center;

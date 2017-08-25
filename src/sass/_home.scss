@@ -220,6 +220,10 @@
     position: relative;
 
     @media (max-width: $lg-width) {
+      width: 40%;
+    }
+
+    @media (max-width: $md-width) {
       background-color: $bright-blue;
       width: 100%;
       padding: 50px 20px 40px 20px;
@@ -235,7 +239,7 @@
       height: 100%;
       transform: skewX(-22.5deg);
 
-      @media (max-width: $lg-width) {
+      @media (max-width: $md-width) {
         opacity: 0.6;
         right: 0;
         width: 100%;
@@ -253,7 +257,7 @@
       margin: 50px 0 40px 0;
       z-index: 1;
 
-      @media (max-width: $lg-width) {
+      @media (max-width: $md-width) {
         margin: 35px 0 25px 0;
       }
     }
@@ -274,6 +278,10 @@
     background-repeat: no-repeat;
 
     @media (max-width: $lg-width) {
+      width: 60%;
+    }
+
+    @media (max-width: $md-width) {
       display: none;
     }
   }
