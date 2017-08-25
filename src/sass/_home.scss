@@ -42,7 +42,7 @@
     }
   }
 
-  h3, h4 {
+  h2 {
     transform: skewX(22.5deg);
   }
 
@@ -52,7 +52,7 @@
     left: 30px;
     transform: translateY(-50%) skewX(22.5deg);
 
-    + h4 {
+    + h2 {
       margin-left: 40px;
     }
   }
@@ -492,7 +492,7 @@
 
   .wrapper {
     margin-bottom: 0;
-    height: 70px;
+    height: 80px;
 
     @media (max-width: $sm-width) {
       height: auto;
@@ -505,7 +505,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: 70px;
+    height: 80px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
