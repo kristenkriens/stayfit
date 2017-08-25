@@ -17,10 +17,34 @@
   &__top {
     border-bottom: 1px solid $gray;
     width: 100%;
-    padding: 20px 0;
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
 
-    h5 {
+    h4 {
       font-size: 20px;
+      margin-right: 20px;
+    }
+
+    a {
+      background-color: $med-blue;
+      color: $gray;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 35px;
+      height: 35px;
+      margin-left: 8px;
+
+      &:hover {
+        &:first-of-type {
+          background-color: #3651dc;
+        }
+
+        &:nth-of-type(2) {
+          background-color: #1da1f2;
+        }
+      }
     }
   }
 
@@ -30,7 +54,7 @@
     flex-wrap: wrap;
     color: $gray;
     width: 100%;
-    padding: 20px 0;
+    padding: 30px 0;
 
     &-row {
       width: calc(25% - 20px);
@@ -55,6 +79,7 @@
 
       h5 {
         margin-bottom: 15px;
+        text-transform: uppercase;
       }
 
       &:first-of-type {

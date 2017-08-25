@@ -46,9 +46,10 @@
     transform: skewX(22.5deg);
   }
 
-  img {
+  i.fa {
+    font-size: 25px;
     position: absolute;
-    top: 50%;
+    top: 49%;
     left: 30px;
     transform: translateY(-50%) skewX(22.5deg);
 

@@ -43,7 +43,6 @@ h4, .h4 {
 
 h5, .h5 {
   font-size: 16px;
-  text-transform: uppercase;
 
   @media (max-width: $sm-width) {
     font-size: 14px;
@@ -65,6 +64,10 @@ p {
   main & {
     color: $dark-gray;
   }
+}
+
+.sentence {
+  text-transform: none;
 }
 
 @font-face {

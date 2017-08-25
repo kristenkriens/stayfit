@@ -1,0 +1,100 @@
+.hero-small {
+  background-color: $dark-gray;
+
+  h2 {
+    color: $white;
+    padding: 0 10px;
+    background-color: $bright-blue;
+    margin: 35px 0;
+  }
+}
+
+.trainers {
+  &__items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 10px -10px -10px -10px;
+  }
+
+  &__item {
+    width: calc(25% - 20px);
+    max-width: 300px;
+    margin: 10px;
+    position: relative;
+
+    @media (max-width: $lg-width) {
+      width: calc(33.33% - 20px);
+    }
+
+    @media (max-width: $md-width) {
+      width: calc(50% - 20px);
+    }
+
+    @media (max-width: $sm-width) {
+      width: calc(100% - 20px);
+    }
+
+    &:hover, &:active, &:focus {
+      .trainers__item-text {
+        background-color: $bright-blue;
+
+        &:before {
+          background-color: $bright-blue;
+          transform: scaleX(-1);
+        }
+      }
+    }
+
+    &-image {
+      width: 100%;
+    }
+
+    &-text {
+      background-color: $dark-blue;
+      padding: 25px;
+      margin-top: -10px;
+      position: relative;
+      min-height: 140px;
+
+      @media (max-width: $xl-width) {
+        min-height: 160px;
+      }
+
+      p {
+        color: $white;
+        margin-bottom: 5px;
+      }
+
+      &:before {
+        background-color: $dark-blue;
+        content: '';
+        position: absolute;
+        top: -15px;
+        left: 0;
+        right: 0;
+        padding-bottom: 15px;
+        clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
+      }
+    }
+
+    &-button {
+      background-color: $med-blue;
+      border: none;
+      color: $white;
+      padding: 10px 25px;
+      width: 160px;
+      text-transform: uppercase;
+      position: absolute;
+      bottom: 25px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      i.fa {
+        color: $bright-blue;
+        margin-right: 15px;
+        font-weight: 600;
+      }
+    }
+  }
+}
