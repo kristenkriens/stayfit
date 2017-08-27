@@ -96,8 +96,12 @@
       margin: 9px 0 0 0;
     }
 
-    &-coded {
+    &-code {
       margin: 5px 0;
+
+      a {
+        color: $gray;
+      }
     }
 
     &-legal {
