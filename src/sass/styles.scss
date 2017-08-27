@@ -11,7 +11,7 @@
 @import 'variables';
 @import 'typography';
 @import 'our-team';
-@import 'contact';
+@import 'about-us';
 @import 'home';
 @import 'header';
 @import 'footer';
@@ -87,4 +87,12 @@ body {
 		height: auto !important;
 		margin: inherit;
 	}
+}
+
+button {
+	border: none;
+	text-transform: uppercase;
+	text-align: center;
+	padding: 10px 25px;
+	transition: 200ms background-color ease, 200ms color ease;
 }

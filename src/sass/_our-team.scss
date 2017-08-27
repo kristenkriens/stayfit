@@ -80,16 +80,12 @@
 
     &-button {
       background-color: $med-blue;
-      border: none;
       color: $white;
-      padding: 10px 25px;
       width: 160px;
-      text-transform: uppercase;
       position: absolute;
       bottom: 25px;
       left: 50%;
       transform: translateX(-50%);
-      transition: 200ms ease background-color, 200ms ease color;
 
       &:hover, &:active, &:focus {
         background-color: $white;

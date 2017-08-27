@@ -7,6 +7,14 @@ $(function(){
 		}
 	});
 
+	$('.requirements__item').each(function(i) {
+		var percentage = $(this).find('.requirements__percentage').text();
+
+		$(this).find('.requirements__bar').css('width', percentage);
+
+		console.log(percentage);
+	});
+
 	$('.gym-studio__logos').slick({
 		accessibility: true,
 	  autoplay: true,

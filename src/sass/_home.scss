@@ -99,7 +99,7 @@
 
   &__top {
     color: $bright-blue;
-    font-size: 16px;
+    font-size: 15px;
     margin-bottom: 5px;
     letter-spacing: 2px;
   }
@@ -114,6 +114,13 @@
 
   &--narrow {
     max-width: 400px;
+  }
+
+  &--centered {
+    h3 {
+      width: 100%;
+      text-align: center;
+    }
   }
 }
 
@@ -341,12 +348,10 @@
   }
 
   &__button {
-    text-transform: uppercase;
     padding: 5px 15px;
     border: 1px solid $med-gray;
     background-color: transparent;
     float: right;
-    transition: 200ms background-color ease, 200ms color ease;
     position: absolute;
     bottom: 30px;
     right: 0;
@@ -543,8 +548,8 @@
   }
 
   &__logos {
-    width: calc(100% - 250px);
-    margin-left: 250px;
+    width: calc(100% - 290px);
+    margin-left: 290px;
 
     @media (max-width: $sm-width) {
       margin-left: 0;
