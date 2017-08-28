@@ -1,0 +1,140 @@
+.contact {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: -50px;
+  overflow: hidden;
+
+  &__map {
+    width: 70%;
+    z-index: -1;
+
+    a[href^="http://maps.google.com/maps"],
+    a[href^="https://maps.google.com/maps"],
+    a[href^="https://www.google.com/maps"] {
+      display: none!important;
+    }
+
+    @media (max-width: $lg-width) {
+      width: 60%;
+    }
+
+    @media (max-width: $md-width) {
+      width: 100%;
+      height: 350px;
+    }
+  }
+
+  &__form {
+    font-size: 12px;
+    padding: 50px 50px 50px 0;
+    position: relative;
+    width: 30%;
+
+    @media (max-width: $lg-width) {
+      width: 40%;
+    }
+
+    @media (max-width: $md-width) {
+      width: 100%;
+      padding: 50px;
+    }
+
+    &:before {
+      background-color: $bright-blue;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -150px;
+      width: 200%;
+      height: 100%;
+      transform: skewX(-22.5deg);
+      z-index: -1
+    }
+
+    h3 {
+      color: $white;
+    }
+
+    &-inputs {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 15px;
+      margin-left: -50px;
+
+      @media (max-width: $md-width) {
+        margin-left: 0;
+      }
+
+      &--message {
+        margin-bottom: 35px;
+        margin-left: -100px;
+
+        @media (max-width: $md-width) {
+          margin-left: 0;
+        }
+
+        .contact__form-input {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    &-input {
+      width: calc(50% - 10px);
+      border-bottom: 1px solid $white;
+      margin-bottom: 25px;
+      padding: 5px 10px;
+      position: relative;
+
+      &:before, &:after {
+        position: absolute;
+        content: '';
+        bottom: 0;
+        height: 5px;
+        width: 1px;
+        background-color: $white;
+      }
+
+      &:before {
+        left: 0;
+      }
+
+      &:after {
+        right: 0;
+      }
+
+      input {
+        background-color: transparent;
+        border: none;
+        color: $white;
+        outline: none;
+        width: 100%;
+
+        &::placeholder {
+          color: $white;
+        }
+      }
+    }
+
+    &-button {
+      background-color: $med-blue;
+      color: $white;
+      font-size: 14px;
+      float: right;
+
+      &:hover, &:active, &:focus {
+        background-color: $white;
+        color: $black;
+      }
+
+      i.fa {
+        color: $bright-blue;
+        margin-right: 15px;
+        font-weight: 600;
+      }
+    }
+  }
+}

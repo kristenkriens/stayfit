@@ -10,9 +10,10 @@
 @import 'normalize';
 @import 'variables';
 @import 'typography';
+@import 'home';
 @import 'our-team';
 @import 'about-us';
-@import 'home';
+@import 'contact';
 @import 'header';
 @import 'footer';
 
@@ -89,10 +90,11 @@ body {
 	}
 }
 
-button {
+button, input[type="submit"] {
 	border: none;
 	text-transform: uppercase;
 	text-align: center;
 	padding: 10px 25px;
+	outline: none;
 	transition: 200ms background-color ease, 200ms color ease;
 }
