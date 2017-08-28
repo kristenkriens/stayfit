@@ -25,6 +25,11 @@
   max-width: 950px;
   width: 100%;
   padding: 0 50px;
+  overflow: hidden;
+
+  @media (max-width: $sm-width) {
+    padding: 0 35px;
+  }
 
   &-inner {
     transform: skewX(-22.5deg);
@@ -53,8 +58,16 @@
     left: 30px;
     transform: translateY(-50%) skewX(22.5deg);
 
+    @media (max-width: $sm-width) {
+      display: none;
+    }
+
     + h2 {
       margin-left: 40px;
+
+      @media (max-width: $sm-width) {
+        margin-left: 0;
+      }
     }
   }
 }
