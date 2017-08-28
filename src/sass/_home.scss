@@ -6,6 +6,10 @@
   background-position: center;
   position: relative;
 
+  @media (min-width: $sm-width-plus) and (max-width: $md-width) {
+    height: calc(100vh - 115px);
+  }
+
   .wrapper {
     margin: 0 auto;
   }
@@ -21,10 +25,6 @@
   max-width: 950px;
   width: 100%;
   padding: 0 50px;
-
-  @media (min-width: $sm-width-plus) and (max-width: $md-width) {
-    top: calc(50% + 25px);
-  }
 
   &-inner {
     transform: skewX(-22.5deg);
