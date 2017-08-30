@@ -150,9 +150,10 @@
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
+  margin-bottom: -50px;
 
   &__item {
-    margin: 0 20px;
+    margin: 0 20px 50px 20px;
 
     h5 {
       text-align: center;
@@ -542,8 +543,7 @@
     padding: 15px 10px 15px 20px;
 
     @media (max-width: $sm-width) {
-      position: relative;
-      left: -20px;
+      display: none;
     }
 
     h3 {

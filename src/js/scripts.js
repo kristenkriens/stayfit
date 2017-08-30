@@ -10,7 +10,7 @@ $(function(){
 	$('.requirements__item').each(function(i) {
 		var percentage = $(this).find('.requirements__percentage').text();
 
-		$(this).find('.requirements__bar').css('width', percentage);
+		$(this).find('.requirements__bar').css('width', 'calc(' + percentage + ' - 30px)');
 
 		console.log(percentage);
 	});

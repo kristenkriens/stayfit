@@ -20,6 +20,10 @@ header {
 	@media (min-width: $sm-width-plus) and (max-width: $md-width) {
 		height: 115px;
 	}
+
+	@media (max-width: $sm-width) {
+		height: auto;
+	}
 }
 
 .header__left {

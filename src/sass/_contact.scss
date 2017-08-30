@@ -36,6 +36,7 @@
     }
 
     @media (max-width: $md-width) {
+      background-color: $bright-blue;
       width: 100%;
       padding: 50px 20px;
     }
@@ -49,7 +50,11 @@
       width: 200%;
       height: 100%;
       transform: skewX(-22.5deg);
-      z-index: -1
+      z-index: -1;
+
+      @media (max-width: $md-width) {
+        display: none;
+      }
     }
 
     h3 {
